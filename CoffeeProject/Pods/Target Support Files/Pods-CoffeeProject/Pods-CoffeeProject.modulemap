@@ -1,0 +1,6 @@
+framework module Pods_CoffeeProject {
+  umbrella header "Pods-CoffeeProject-umbrella.h"
+
+  export *
+  module * { export * }
+}
