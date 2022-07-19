@@ -9,6 +9,7 @@ target 'CoffeeProject' do
 
 pod "Alamofire"
 pod "SDWebImage"
+pod "lottie-ios"
 
   target 'CoffeeProjectTests' do
     inherit! :search_paths

@@ -9,4 +9,7 @@ import UIKit
 
 extension CoffeeMainViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        
+    }
 }
