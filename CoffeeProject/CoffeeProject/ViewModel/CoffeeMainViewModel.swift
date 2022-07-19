@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CoffeeMainController: NSObject {
+class CoffeeMainViewModel: NSObject {
 
     var requestCoffee = Request()
     var coffee: CoffeeIced?

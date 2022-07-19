@@ -11,7 +11,7 @@ import Alamofire
 
 class CoffeeMainViewController: UIViewController {
 
-    let controller = CoffeeMainController()
+    let viewModel = CoffeeMainViewModel()
     
     @IBOutlet weak var coffeeTableView: UITableView!
     
@@ -28,10 +28,11 @@ class CoffeeMainViewController: UIViewController {
         coffeeTableView.delegate = self
         coffeeTableView.dataSource = self
         coffeeTableView.register(UINib(nibName: "TableViewCellCoffeeItens", bundle: nil), forCellReuseIdentifier: "cell")
+        coffeeTableView.separatorColor = .brown
     }
     
     func callRequest() {
-        controller.getRequest { success in
+        viewModel.getRequest { success in
             if success {
                 self.coffeeTableView.reloadData()
             } else {

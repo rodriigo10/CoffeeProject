@@ -17,7 +17,6 @@ class TableViewCellCoffeeItens: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,8 +28,10 @@ class TableViewCellCoffeeItens: UITableViewCell {
     func cellItens(object: CoffeeIcedElement?) {
         let urlImage = URL(string: object?.image ?? "")
         imageCoffee.sd_setImage(with: urlImage)
+        imageCoffee.layer.cornerRadius = self.imageCoffee.frame.size.width/2.0;
         labelCoffee.text = object?.title ?? ""
         descriptionCoffee.text = object?.coffeeIcedDescription ?? ""
+        self.layer.borderWidth = 0.3
+        self.layer.cornerRadius = 15.0
     }
-    
 }
